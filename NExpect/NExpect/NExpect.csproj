@@ -43,6 +43,7 @@
     <Compile Include="ExpectationBase.cs" />
     <Compile Include="ExpectationNotMetException.cs" />
     <Compile Include="InstanceExpectation.cs" />
+    <Compile Include="NotContainAllExpectation.cs" />
     <Compile Include="NotContainExpectation.cs" />
     <Compile Include="NotEqualExpectation.cs" />
     <Compile Include="NotInstanceExpectation.cs" />

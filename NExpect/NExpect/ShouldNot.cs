@@ -1,4 +1,6 @@
-﻿namespace NExpect
+﻿using System;
+
+namespace NExpect
 {
     public class ShouldNot<TTargetType> : Should<TTargetType>
     {
@@ -25,6 +27,11 @@
         public override void Throw<TException>()
         {
             new NotThrowExpectation<TTargetType, TException>(Target);
+        }
+
+        public override ContainAllExpectation<TTargetType> Contain()
+        {
+            return new NotContainAllExpectation<TTargetType>(Target);
         }
     }
 }

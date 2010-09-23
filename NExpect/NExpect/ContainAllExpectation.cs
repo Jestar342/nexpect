@@ -9,11 +9,11 @@ namespace NExpect
         {
         }
 
-        public void All<TEnumerableType>(TEnumerableType anEnumerable)
+        public virtual void All<TEnumerableType>(TEnumerableType anEnumerable)
             where TEnumerableType : IEnumerable
         {
             foreach (var element in anEnumerable)
-            //{
+            {
                 Target.Should().Contain(element);
             }
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Linq;
 
 namespace NExpect
 {
@@ -11,8 +12,8 @@ namespace NExpect
 
         public override void Contain<TType>(TType @object)
         {
-            var collection = CastTargetTo<ICollection<TType>>();
-            if (collection.Contains(@object))
+            var collection = CastTargetTo<IEnumerable>();
+            if (collection.Cast<object>().Contains(@object))
                 ThrowExpectationNotMetException("should not contain", @object);
         }
     }

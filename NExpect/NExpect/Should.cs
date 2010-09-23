@@ -42,7 +42,7 @@ namespace NExpect
             new ThrowExpectation<TTargetType, TException>(Target);
         }
 
-        public ContainAllExpectation<TTargetType> Contain()
+        public virtual ContainAllExpectation<TTargetType> Contain()
         {
             return new ContainAllExpectation<TTargetType>(Target);
         }
