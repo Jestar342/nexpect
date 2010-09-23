@@ -13,7 +13,7 @@ namespace NExpect
             where TEnumerableType : IEnumerable
         {
             foreach (var element in anEnumerable)
-            {
+            //{
                 Target.Should().Contain(element);
             }
         }
