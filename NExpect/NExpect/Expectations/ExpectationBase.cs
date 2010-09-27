@@ -18,7 +18,6 @@ namespace NExpect.Expectations
         }
 
         protected TType CastTargetTo<TType>()
-            where TType : class
         {
             object tempObject = Target;
             var casted = default(TType);

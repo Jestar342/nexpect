@@ -22,7 +22,7 @@ namespace NExpect
 
         public override void Contain<TElementType>(TElementType @object)
         {
-            new NotContainExpectation<TTargetType>(Target).Contain(@object);
+            new NotContainExpectation<TTargetType>(Target, @object);
         }
 
         public override void Throw<TException>()
@@ -53,6 +53,16 @@ namespace NExpect
         public override EndWithExpectation<TTargetType> End()
         {
             return new NotEndWithExpectation<TTargetType>(Target);
+        }
+
+        public override LessThanExpectation<TTargetType> Less()
+        {
+            return new NotLessThanExpectation<TTargetType>(Target);
+        }
+
+        public override GreaterThanExpectation<TTargetType> Greater()
+        {
+            return new NotGreaterThanExpectation<TTargetType>(Target);
         }
     }
 }

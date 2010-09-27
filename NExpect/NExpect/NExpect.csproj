@@ -44,12 +44,16 @@
     <Compile Include="Expectations\EqualExpectation.cs" />
     <Compile Include="Expectations\ExpectationBase.cs" />
     <Compile Include="Exceptions\ExpectationNotMetException.cs" />
+    <Compile Include="Expectations\GreaterThanExpectation.cs" />
     <Compile Include="Expectations\InstanceExpectation.cs" />
+    <Compile Include="Expectations\LessThanExpectation.cs" />
     <Compile Include="Expectations\NotContainAllExpectation.cs" />
     <Compile Include="Expectations\NotContainExpectation.cs" />
     <Compile Include="Expectations\NotEndWithExpectation.cs" />
     <Compile Include="Expectations\NotEqualExpectation.cs" />
+    <Compile Include="Expectations\NotGreaterThanExpectation.cs" />
     <Compile Include="Expectations\NotInstanceExpectation.cs" />
+    <Compile Include="Expectations\NotLessThanExpectation.cs" />
     <Compile Include="Expectations\NotStartWithExpectation.cs" />
     <Compile Include="Expectations\NotThrowExpectation.cs" />
     <Compile Include="Expectations\ContainAllExpectation.cs" />

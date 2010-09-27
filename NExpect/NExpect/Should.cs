@@ -35,7 +35,7 @@ namespace NExpect
 
         public virtual void Contain<TType>(TType @object)
         {
-            new ContainExpectation<TTargetType>(Target).Contain(@object);
+            new ContainExpectation<TTargetType>(Target, @object);
         }
 
         public virtual void Throw<TException>()
@@ -67,6 +67,16 @@ namespace NExpect
         public virtual EndWithExpectation<TTargetType> End()
         {
             return new EndWithExpectation<TTargetType>(Target);
+        }
+
+        public virtual LessThanExpectation<TTargetType> Less()
+        {
+            return new LessThanExpectation<TTargetType>(Target);
+        }
+
+        public virtual GreaterThanExpectation<TTargetType> Greater()
+        {
+            return new GreaterThanExpectation<TTargetType>(Target);
         }
     }
 }

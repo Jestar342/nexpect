@@ -5,12 +5,13 @@ namespace NExpect.Expectations
 {
     public class ContainExpectation<TTargetType> : ExpectationBase<TTargetType>
     {
-        public ContainExpectation(TTargetType target)
+        public ContainExpectation(TTargetType target, object @object)
             : base(target)
         {
+            Perform(@object);
         }
 
-        public virtual void Contain<TType>(TType @object)
+        protected virtual void Perform<TType>(TType @object)
         {
             var collection = CastTargetTo<IEnumerable>();
             if (!collection.Cast<object>().Contains(@object))
