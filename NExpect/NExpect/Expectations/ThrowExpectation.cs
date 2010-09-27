@@ -1,6 +1,7 @@
 ﻿using System;
+using NExpect.Exceptions;
 
-namespace NExpect
+namespace NExpect.Expectations
 {
     public class ThrowExpectation<TTargetType, TException> : ExpectationBase<TTargetType> where TException : Exception
     {

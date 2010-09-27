@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using NExpect.Expectations;
 
 namespace NExpect
 {
@@ -45,6 +47,26 @@ namespace NExpect
         public virtual ContainAllExpectation<TTargetType> Contain()
         {
             return new ContainAllExpectation<TTargetType>(Target);
+        }
+
+        public virtual void Null()
+        {
+            new NullExpectation<TTargetType>(Target).Null();
+        }
+
+        public virtual void Empty()
+        {
+            new EmptyExpectation<TTargetType>(Target).Empty();
+        }
+
+        public virtual void StartWith(IEnumerable enumerable)
+        {
+            new StartWithExpectation<TTargetType>(Target).StartWith(enumerable);
+        }
+
+        public virtual void EndWith(IEnumerable enumerable)
+        {
+            new EndWithExpectation<TTargetType>(Target).EndWith(enumerable);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace NExpect
+namespace NExpect.Expectations
 {
     public class ContainAllExpectation<TTargetType> : ExpectationBase<TTargetType>
     {

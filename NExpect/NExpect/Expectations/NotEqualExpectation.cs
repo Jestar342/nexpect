@@ -1,4 +1,4 @@
-﻿namespace NExpect
+﻿namespace NExpect.Expectations
 {
     public class NotEqualExpectation<TTargetType> : EqualExpectation<TTargetType>
     {

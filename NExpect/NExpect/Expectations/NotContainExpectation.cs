@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Linq;
 
-namespace NExpect
+namespace NExpect.Expectations
 {
     internal class NotContainExpectation<TTargetType> : ContainExpectation<TTargetType>
     {

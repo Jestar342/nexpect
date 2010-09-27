@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Linq;
 
-namespace NExpect
+namespace NExpect.Expectations
 {
     public class ContainExpectation<TTargetType> : ExpectationBase<TTargetType>
     {

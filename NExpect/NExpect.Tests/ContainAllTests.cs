@@ -1,11 +1,16 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NExpect.Exceptions;
 
 namespace NExpect.Tests
 {
     [TestClass]
     public class ContainAllTests
     {
+        private readonly int[] _arrayA = new[] {1, 2, 3, 4};
+        private readonly int[] _arrayB = new[] {5, 6, 7, 8};
+
         [TestMethod]
         public void ShouldContainAll()
         {
@@ -18,19 +23,25 @@ namespace NExpect.Tests
         [TestMethod]
         public void ShouldContainAllInArray()
         {
-            var arrayA = new[] {1, 2, 3, 4};
-            var arrayB = new[] {1, 2, 3, 4};
-
-            arrayA.Should().Contain().All(arrayB);
+            _arrayA.Should().Contain().All((Array) _arrayA.Clone());
         }
 
         [TestMethod]
         public void ShouldNotContainAll()
         {
-            var arrayA = new[] {1, 2, 3, 4};
-            var arrayB = new[] {5, 6, 7, 8};
+            _arrayA.Should().Not().Contain().All(_arrayB);
+        }
 
-            arrayA.Should().Not().Contain().All(arrayB);
+        [TestMethod, ExpectedException(typeof (ExpectationNotMetException))]
+        public void ShouldRaiseExceptionWhenDoesntContainAll()
+        {
+            _arrayA.Should().Contain().All(_arrayB);
+        }
+
+        [TestMethod, ExpectedException(typeof (ExpectationNotMetException))]
+        public void ShouldRaiseExceptionWhenDoesContainAll()
+        {
+            _arrayA.Should().Not().Contain().All((Array) _arrayA.Clone());
         }
     }
 }

@@ -38,21 +38,29 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ContainExpectation.cs" />
-    <Compile Include="EqualExpectation.cs" />
-    <Compile Include="ExpectationBase.cs" />
-    <Compile Include="ExpectationNotMetException.cs" />
-    <Compile Include="InstanceExpectation.cs" />
-    <Compile Include="NotContainAllExpectation.cs" />
-    <Compile Include="NotContainExpectation.cs" />
-    <Compile Include="NotEqualExpectation.cs" />
-    <Compile Include="NotInstanceExpectation.cs" />
-    <Compile Include="NotThrowExpectation.cs" />
-    <Compile Include="ContainAllExpectation.cs" />
+    <Compile Include="Expectations\EmptyExpectation.cs" />
+    <Compile Include="Expectations\ContainExpectation.cs" />
+    <Compile Include="Expectations\EndWithExpectation.cs" />
+    <Compile Include="Expectations\EqualExpectation.cs" />
+    <Compile Include="Expectations\ExpectationBase.cs" />
+    <Compile Include="Exceptions\ExpectationNotMetException.cs" />
+    <Compile Include="Expectations\InstanceExpectation.cs" />
+    <Compile Include="Expectations\NotContainAllExpectation.cs" />
+    <Compile Include="Expectations\NotContainExpectation.cs" />
+    <Compile Include="Expectations\NotEndWithExpectation.cs" />
+    <Compile Include="Expectations\NotEqualExpectation.cs" />
+    <Compile Include="Expectations\NotInstanceExpectation.cs" />
+    <Compile Include="Expectations\NotStartWithExpectation.cs" />
+    <Compile Include="Expectations\NotThrowExpectation.cs" />
+    <Compile Include="Expectations\ContainAllExpectation.cs" />
+    <Compile Include="Expectations\NullExpectation.cs" />
+    <Compile Include="Expectations\NotNullExpectation.cs" />
+    <Compile Include="Expectations\NotEmptyExpectation.cs" />
     <Compile Include="Should.cs" />
     <Compile Include="ShouldHelper.cs" />
     <Compile Include="ShouldNot.cs" />
-    <Compile Include="ThrowExpectation.cs" />
+    <Compile Include="Expectations\ThrowExpectation.cs" />
+    <Compile Include="Expectations\StartWithExpectation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

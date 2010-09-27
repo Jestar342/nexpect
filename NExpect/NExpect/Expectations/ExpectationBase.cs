@@ -1,12 +1,13 @@
 ﻿using System;
+using NExpect.Exceptions;
 
-namespace NExpect
+namespace NExpect.Expectations
 {
-    public class ExpectationBase<TTargetType>
+    public abstract class ExpectationBase<TTargetType>
     {
         protected TTargetType Target;
 
-        public ExpectationBase(TTargetType target)
+        protected ExpectationBase(TTargetType target)
         {
             Target = target;
         }

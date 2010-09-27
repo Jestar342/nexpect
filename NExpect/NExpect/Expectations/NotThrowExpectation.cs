@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NExpect
+namespace NExpect.Expectations
 {
     public class NotThrowExpectation<TTargetType, TException> : ThrowExpectation<TTargetType, TException>
         where TException : Exception

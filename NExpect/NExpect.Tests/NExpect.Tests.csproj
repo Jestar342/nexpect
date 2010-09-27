@@ -47,10 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContainTests.cs" />
+    <Compile Include="EmptyTests.cs" />
+    <Compile Include="EndWithTests.cs" />
     <Compile Include="EqualityTests.cs" />
     <Compile Include="ContainAllTests.cs" />
     <Compile Include="InstanceTests.cs" />
+    <Compile Include="NullTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartWithTests.cs" />
     <Compile Include="ThrowTests.cs" />
   </ItemGroup>
   <ItemGroup>
