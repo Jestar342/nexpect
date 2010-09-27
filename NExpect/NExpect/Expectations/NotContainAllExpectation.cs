@@ -10,7 +10,7 @@
         {
             foreach (var element in anEnumerable)
             {
-                Target.Should().Not().Contain(element);
+                Target.Should().Not.Contain(element);
             }
         }
     }

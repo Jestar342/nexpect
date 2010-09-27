@@ -22,13 +22,13 @@ namespace NExpect.Tests
         [TestMethod]
         public void ShouldNotThrow()
         {
-            ((Action)(() => { })).Should().Not().Throw<Exception>();
+            ((Action)(() => { })).Should().Not.Throw<Exception>();
         }
 
         [TestMethod, ExpectedException(typeof (ExpectationNotMetException))]
         public void ShouldRaiseExceptionIfThrown()
         {
-            ((Action)(() => { throw new Exception(); })).Should().Not().Throw<Exception>();
+            ((Action)(() => { throw new Exception(); })).Should().Not.Throw<Exception>();
         }
 
         [TestMethod, ExpectedException(typeof (ExpectationNotMetException))]

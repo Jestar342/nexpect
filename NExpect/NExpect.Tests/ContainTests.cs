@@ -24,13 +24,13 @@ namespace NExpect.Tests
         [TestMethod]
         public void ShouldNotContain()
         {
-            _list.Should().Not().Contain(5);
+            _list.Should().Not.Contain(5);
         }
 
         [TestMethod, ExpectedException(typeof (ExpectationNotMetException))]
         public void ShouldRaiseExceptionWhenDoesContainNotExcpectedItem()
         {
-            _list.Should().Not().Contain(2);
+            _list.Should().Not.Contain(2);
         }
 
         [TestMethod, ExpectedException(typeof (ExpectationNotMetException))]

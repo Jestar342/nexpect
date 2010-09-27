@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using NExpect.Expectations;
 
 namespace NExpect
@@ -13,24 +12,14 @@ namespace NExpect
             Target = target;
         }
 
-        public ShouldNot<TTargetType> Not()
+        public ShouldNot<TTargetType> Not
         {
-            return new ShouldNot<TTargetType>(Target);
+            get { return new ShouldNot<TTargetType>(Target); }
         }
 
-        public Should<TTargetType> Be()
+        public Should<TTargetType> Be
         {
-            return this;
-        }
-
-        public virtual EqualExpectation<TTargetType> Equal()
-        {
-            return new EqualExpectation<TTargetType>(Target);
-        }
-
-        public virtual InstanceExpectation<TTargetType> Instance()
-        {
-            return new InstanceExpectation<TTargetType>(Target);
+            get { return this; }
         }
 
         public virtual void Contain<TType>(TType @object)
@@ -38,20 +27,9 @@ namespace NExpect
             new ContainExpectation<TTargetType>(Target, @object);
         }
 
-        public virtual void Throw<TException>()
-            where TException : Exception
-        {
-            new ThrowExpectation<TTargetType, TException>(Target);
-        }
-
         public virtual ContainAllExpectation<TTargetType> Contain()
         {
             return new ContainAllExpectation<TTargetType>(Target);
-        }
-
-        public virtual void Null()
-        {
-            new NullExpectation<TTargetType>(Target).Null();
         }
 
         public virtual void Empty()
@@ -59,24 +37,44 @@ namespace NExpect
             new EmptyExpectation<TTargetType>(Target).Empty();
         }
 
-        public virtual StartWithExpectation<TTargetType> Start()
+        public virtual EndWithExpectation<TTargetType> End
         {
-            return new StartWithExpectation<TTargetType>(Target);
+            get { return new EndWithExpectation<TTargetType>(Target); }
         }
 
-        public virtual EndWithExpectation<TTargetType> End()
+        public virtual EqualExpectation<TTargetType> Equal
         {
-            return new EndWithExpectation<TTargetType>(Target);
+            get { return new EqualExpectation<TTargetType>(Target); }
         }
 
-        public virtual LessThanExpectation<TTargetType> Less()
+        public virtual GreaterThanExpectation<TTargetType> Greater
         {
-            return new LessThanExpectation<TTargetType>(Target);
+            get { return new GreaterThanExpectation<TTargetType>(Target); }
         }
 
-        public virtual GreaterThanExpectation<TTargetType> Greater()
+        public virtual InstanceExpectation<TTargetType> Instance
         {
-            return new GreaterThanExpectation<TTargetType>(Target);
+            get { return new InstanceExpectation<TTargetType>(Target); }
+        }
+
+        public virtual LessThanExpectation<TTargetType> Less
+        {
+            get { return new LessThanExpectation<TTargetType>(Target); }
+        }
+
+        public virtual void Null()
+        {
+            new NullExpectation<TTargetType>(Target).Null();
+        }
+
+        public virtual StartWithExpectation<TTargetType> Start
+        {
+            get { return new StartWithExpectation<TTargetType>(Target); }
+        }
+
+        public virtual void Throw<TException>() where TException : Exception
+        {
+            new ThrowExpectation<TTargetType, TException>(Target);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace NExpect.Expectations
             var targetEnumerator = TargetReversed.GetEnumerator();
             while(targetEnumerator.MoveNext() && enumerator.MoveNext())
             {
-                targetEnumerator.Current.Should().Be().Equal().To(enumerator.Current);
+                targetEnumerator.Current.Should().Be.Equal.To(enumerator.Current);
             }
 
             if (enumerator.MoveNext())

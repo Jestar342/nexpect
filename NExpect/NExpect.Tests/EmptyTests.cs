@@ -13,25 +13,25 @@ namespace NExpect.Tests
         [TestMethod]
         public void ShouldBeEmpty()
         {
-            _emptyList.Should().Be().Empty();
+            _emptyList.Should().Be.Empty();
         }
 
         [TestMethod]
         public void ShouldNotBeEmpty()
         {
-            _notEmptyList.Should().Not().Be().Empty();
+            _notEmptyList.Should().Not.Be.Empty();
         }
 
         [TestMethod, ExpectedException(typeof(ExpectationNotMetException))]
         public void ShouldRaiseExceptionWhenNotEmptyAndExpectedToBeEmpty()
         {
-            _notEmptyList.Should().Be().Empty();
+            _notEmptyList.Should().Be.Empty();
         }
 
         [TestMethod, ExpectedException(typeof(ExpectationNotMetException))]
         public void ShouldRaiseExceptionWhenEmptyAndExpectedToNotBeEmpty()
         {
-            _emptyList.Should().Not().Be().Empty();
+            _emptyList.Should().Not.Be.Empty();
         }
     }
 }

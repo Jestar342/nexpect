@@ -19,7 +19,7 @@ namespace NExpect.Expectations
             SequenceEnum = enumerable.GetEnumerator();
             while (CollectionEnum.MoveNext() && SequenceEnum.MoveNext())
             {
-                CollectionEnum.Current.Should().Be().Equal().To(SequenceEnum.Current);
+                CollectionEnum.Current.Should().Be.Equal.To(SequenceEnum.Current);
             }
 
             if (SequenceEnum.MoveNext())

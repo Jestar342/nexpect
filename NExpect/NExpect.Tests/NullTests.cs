@@ -11,25 +11,25 @@ namespace NExpect.Tests
         [TestMethod]
         public void ShouldBeNull()
         {
-            _null.Should().Be().Null();
+            _null.Should().Be.Null();
         }
 
         [TestMethod]
         public void ShouldNotBeNull()
         {
-            1.Should().Not().Be().Null();
+            1.Should().Not.Be.Null();
         }
 
         [TestMethod, ExpectedException(typeof (ExpectationNotMetException))]
         public void ShouldRaiseExceptionWhenNotNullAndExpectedToBeNull()
         {
-            1.Should().Be().Null();
+            1.Should().Be.Null();
         }
 
         [TestMethod, ExpectedException(typeof (ExpectationNotMetException))]
         public void ShouldRaiseExceptionWhenNullAndExpectedToBeNotNull()
         {
-            _null.Should().Not().Be().Null();
+            _null.Should().Not.Be.Null();
         }
     }
 }

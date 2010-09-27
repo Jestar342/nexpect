@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using NExpect.Expectations;
+﻿using NExpect.Expectations;
 
 namespace NExpect
 {
@@ -10,14 +9,14 @@ namespace NExpect
         {
         }
 
-        public override EqualExpectation<TTargetType> Equal()
+        public override EqualExpectation<TTargetType> Equal
         {
-            return new NotEqualExpectation<TTargetType>(Target);
+            get { return new NotEqualExpectation<TTargetType>(Target); }
         }
 
-        public override InstanceExpectation<TTargetType> Instance()
+        public override InstanceExpectation<TTargetType> Instance
         {
-            return new NotInstanceExpectation<TTargetType>(Target);
+            get { return new NotInstanceExpectation<TTargetType>(Target); }
         }
 
         public override void Contain<TElementType>(TElementType @object)
@@ -45,24 +44,24 @@ namespace NExpect
             new NotEmptyExpectation<TTargetType>(Target).Empty();
         }
 
-        public override StartWithExpectation<TTargetType> Start()
+        public override StartWithExpectation<TTargetType> Start
         {
-            return new NotStartWithExpectation<TTargetType>(Target);
+            get { return new NotStartWithExpectation<TTargetType>(Target); }
         }
 
-        public override EndWithExpectation<TTargetType> End()
+        public override EndWithExpectation<TTargetType> End
         {
-            return new NotEndWithExpectation<TTargetType>(Target);
+            get { return new NotEndWithExpectation<TTargetType>(Target); }
         }
 
-        public override LessThanExpectation<TTargetType> Less()
+        public override LessThanExpectation<TTargetType> Less
         {
-            return new NotLessThanExpectation<TTargetType>(Target);
+            get { return new NotLessThanExpectation<TTargetType>(Target); }
         }
 
-        public override GreaterThanExpectation<TTargetType> Greater()
+        public override GreaterThanExpectation<TTargetType> Greater
         {
-            return new NotGreaterThanExpectation<TTargetType>(Target);
+            get { return new NotGreaterThanExpectation<TTargetType>(Target); }
         }
     }
 }
