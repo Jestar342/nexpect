@@ -14,7 +14,7 @@ namespace NExpect.Expectations
             CollectionEnum = Collection.GetEnumerator();
         }
 
-        public virtual void StartWith(IEnumerable enumerable)
+        public virtual void With(IEnumerable enumerable)
         {
             SequenceEnum = enumerable.GetEnumerator();
             while (CollectionEnum.MoveNext() && SequenceEnum.MoveNext())

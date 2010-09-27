@@ -45,14 +45,14 @@ namespace NExpect
             new NotEmptyExpectation<TTargetType>(Target).Empty();
         }
 
-        public override void StartWith(IEnumerable enumerable)
+        public override StartWithExpectation<TTargetType> Start()
         {
-            new NotStartWithExpectation<TTargetType>(Target).StartWith(enumerable);
+            return new NotStartWithExpectation<TTargetType>(Target);
         }
 
-        public override void EndWith(IEnumerable enumerable)
+        public override EndWithExpectation<TTargetType> End()
         {
-            new NotEndWithExpectation<TTargetType>(Target).EndWith(enumerable);
+            return new NotEndWithExpectation<TTargetType>(Target);
         }
     }
 }

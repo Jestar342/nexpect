@@ -8,7 +8,7 @@ namespace NExpect.Expectations
         {
         }
 
-        public override void StartWith(IEnumerable enumerable)
+        public override void With(IEnumerable enumerable)
         {
             SequenceEnum = enumerable.GetEnumerator();
 

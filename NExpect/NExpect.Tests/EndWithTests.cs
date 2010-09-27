@@ -11,25 +11,25 @@ namespace NExpect.Tests
         [TestMethod]
         public void ShouldEndWith()
         {
-            AString.Should().EndWith("cd");
+            AString.Should().End().With("cd");
         }
 
         [TestMethod]
         public void ShouldNotEndWith()
         {
-            AString.Should().Not().EndWith("ab");
+            AString.Should().Not().End().With("ab");
         }
 
         [TestMethod, ExpectedException(typeof(ExpectationNotMetException))]
         public void ShouldRaiseExceptionIfDoesNotEndWith()
         {
-            AString.Should().EndWith("efgh");
+            AString.Should().End().With("efgh");
         }
 
         [TestMethod, ExpectedException(typeof(ExpectationNotMetException))]
         public void ShouldRaiseExceptionIfDoesEndWith()
         {
-            AString.Should().Not().EndWith(AString);
+            AString.Should().Not().End().With(AString);
         }
     }
 }

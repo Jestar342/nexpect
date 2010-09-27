@@ -8,7 +8,7 @@ namespace NExpect.Expectations
         {
         }
 
-        public override void EndWith(IEnumerable enumerable)
+        public override void With(IEnumerable enumerable)
         {
             var enumerator = Reverse(enumerable).GetEnumerator();
             var targetEnumerator = TargetReversed.GetEnumerator();

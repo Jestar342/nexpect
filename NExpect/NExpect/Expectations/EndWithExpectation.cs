@@ -25,7 +25,7 @@ namespace NExpect.Expectations
             return arrayList;
         }
 
-        public virtual void EndWith(IEnumerable enumerable)
+        public virtual void With(IEnumerable enumerable)
         {
             var enumerator = Reverse(enumerable).GetEnumerator();
             var targetEnumerator = TargetReversed.GetEnumerator();

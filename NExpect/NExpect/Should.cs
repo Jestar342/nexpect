@@ -59,14 +59,14 @@ namespace NExpect
             new EmptyExpectation<TTargetType>(Target).Empty();
         }
 
-        public virtual void StartWith(IEnumerable enumerable)
+        public virtual StartWithExpectation<TTargetType> Start()
         {
-            new StartWithExpectation<TTargetType>(Target).StartWith(enumerable);
+            return new StartWithExpectation<TTargetType>(Target);
         }
 
-        public virtual void EndWith(IEnumerable enumerable)
+        public virtual EndWithExpectation<TTargetType> End()
         {
-            new EndWithExpectation<TTargetType>(Target).EndWith(enumerable);
+            return new EndWithExpectation<TTargetType>(Target);
         }
     }
 }
